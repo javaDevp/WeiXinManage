@@ -33,30 +33,91 @@ namespace bluedragon.weixin.tools.ui
                          select m;
             foreach (var pMenu in pMenus)
             {
-                var pId = pMenu.Element("ID").Value;
-                var pText = pMenu.Element("Text").Value;
-                //添加父菜单
-                var pNode = tvMenu.Nodes.Add(pId, pText);
-                var pMenuItem = (ToolStripMenuItem)msMenu.Items.Add(pText);
-                var cMenus = from m in pMenu.Elements("SubItem")
-                    select m;
-                //添加子菜单及绑定事件
-                foreach (var cMenu in cMenus)
+                AddMenuItem(pMenu, null);
+                AddTvMenuItem(pMenu, null);
+                #region oldVersion
+                //var pId = pMenu.Element("ID").Value;
+                //var pText = pMenu.Element("Text").Value;
+                ////添加父菜单
+                //var pNode = tvMenu.Nodes.Add(pId, pText);
+                //var pMenuItem = (ToolStripMenuItem)msMenu.Items.Add(pText);
+                //var cMenus = from m in pMenu.Elements("SubItem")
+                //    select m;
+                ////添加子菜单及绑定事件
+                //foreach (var cMenu in cMenus)
+                //{
+                //    var cId = cMenu.Element("ID").Value;
+                //    var cText = cMenu.Element("Text").Value;
+                //    var assemblyFile = cMenu.Element("AssemblyFile").Value;
+                //    var typeName = cMenu.Element("TypeName").Value;
+                //    pNode.Nodes.Add(cId, cText);
+                //    var cMenuItem = (ToolStripMenuItem)pMenuItem.DropDownItems.Add(cText);
+                //    if (!string.IsNullOrEmpty(assemblyFile) && !string.IsNullOrEmpty(typeName))
+                //    {
+                //        cMenuItem.Click += new EventHandler(delegate
+                //        {
+                //            AddTabPage(assemblyFile, typeName, cText);
+                //        });
+                //    }
+                //}
+                #endregion
+            }
+        }
+
+        /// <summary>
+        /// 递归加载菜单
+        /// </summary>
+        /// <param name="menuElement"></param>
+        /// <param name="menuItem"></param>
+        private void AddMenuItem(XElement menuElement, ToolStripMenuItem menuItem)
+        {
+            ToolStripMenuItem menuItemChild = null;
+            var text = menuElement.Element("Text").Value;
+            if (menuItem == null)
+            {
+                menuItemChild = (ToolStripMenuItem)msMenu.Items.Add(text);
+            }
+            else
+            {
+                menuItemChild = (ToolStripMenuItem)menuItem.DropDownItems.Add(text);
+            }
+            var assemblyFile = menuElement.Element("AssemblyFile") == null ? "" : menuElement.Element("AssemblyFile").Value;
+            var typeName = menuElement.Element("TypeName") == null ? "" : menuElement.Element("TypeName").Value;
+            if (!string.IsNullOrEmpty(assemblyFile) && !string.IsNullOrEmpty(typeName))
+            {
+                menuItemChild.Click += new EventHandler(delegate
                 {
-                    var cId = cMenu.Element("ID").Value;
-                    var cText = cMenu.Element("Text").Value;
-                    var assemblyFile = cMenu.Element("AssemblyFile").Value;
-                    var typeName = cMenu.Element("TypeName").Value;
-                    pNode.Nodes.Add(cId, cText);
-                    var cMenuItem = (ToolStripMenuItem)pMenuItem.DropDownItems.Add(cText);
-                    if (!string.IsNullOrEmpty(assemblyFile) && !string.IsNullOrEmpty(typeName))
-                    {
-                        cMenuItem.Click += new EventHandler(delegate
-                        {
-                            AddTabPage(assemblyFile, typeName, cText);
-                        });
-                    }
-                }
+                    AddTabPage(assemblyFile, typeName, text);
+                });
+            }
+            var menuElementChild = menuElement.Elements("SubItem");
+            foreach (var ele in menuElementChild)
+            {
+                AddMenuItem(ele, menuItemChild);
+            }
+        }
+
+        /// <summary>
+        /// 递归加载树节点
+        /// </summary>
+        /// <param name="menuElement"></param>
+        /// <param name="menuNode"></param>
+        private void AddTvMenuItem(XElement menuElement, TreeNode menuNode)
+        {
+            TreeNode menuNodeChild = null;
+            var text = menuElement.Element("Text").Value;
+            if (menuNode == null)
+            {
+                menuNodeChild = tvMenu.Nodes.Add(text);
+            }
+            else
+            {
+                menuNodeChild = menuNode.Nodes.Add(text);
+            }
+            var menuElementChild = menuElement.Elements("SubItem");
+            foreach (var ele in menuElementChild)
+            {
+                AddTvMenuItem(ele, menuNodeChild);
             }
         }
 
