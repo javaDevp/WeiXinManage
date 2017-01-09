@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <Item>
+    <ID>1</ID>
+    <Text><![CDATA[系统管理]]></Text>
+    <SubItem>
+      <ID>11</ID>
+      <Text><![CDATA[退出(E&xit)]]></Text>
+      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
+      <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
+    </SubItem>
+  </Item>
+  <Item>
+    <ID>2</ID>
+    <Text><![CDATA[基础管理]]></Text>
+    <SubItem>
+      <ID>21</ID>
+      <Text><![CDATA[菜单管理]]></Text>
+      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
+      <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
+    </SubItem>
+  </Item>
+  <Item>
+    <ID>3</ID>
+    <Text><![CDATA[素材管理]]></Text>
+    <SubItem>
+      <ID>31</ID>
+      <Text><![CDATA[图片素材]]></Text>
+      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
+      <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
+    </SubItem>
+  </Item>
+  <Item>
+    <ID>4</ID>
+    <Text><![CDATA[帮助]]></Text>
+    <SubItem>
+      <ID>41</ID>
+      <Text><![CDATA[关于(&About)]]></Text>
+      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
+      <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
+    </SubItem>
+  </Item>
+</Menu>

@@ -16,17 +16,30 @@ namespace bluedragon.weixin.tools
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //判断是否配置了appId & appSecret & token
-            if (!ConfigurationHelper.IsAppSettingExist("appId")
-                || !ConfigurationHelper.IsAppSettingExist("appSecret")
-                || !ConfigurationHelper.IsAppSettingExist("token"))
+            try
             {
-                FrmSettings frm = new FrmSettings();
-                frm.ShowDialog();
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                //判断是否配置了appId & appSecret & token
+                if (!ConfigurationHelper.IsAppSettingExist("appId")
+                    || !ConfigurationHelper.IsAppSettingExist("appSecret")
+                    || !ConfigurationHelper.IsAppSettingExist("token"))
+                {
+                    FrmSettings frm = new FrmSettings();
+                    if (DialogResult.OK == frm.ShowDialog())
+                    {
+                        Application.Run(new FrmMain());
+                    }
+                }
+                else
+                {
+                    Application.Run(new FrmMain());
+                }
             }
-            Application.Run(new FrmMain());
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "出错了", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

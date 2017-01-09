@@ -37,6 +37,8 @@ namespace bluedragon.weixin.tools.ui
             ConfigurationHelper.AddAppSetting("appId", txtAppID.Text);
             ConfigurationHelper.AddAppSetting("appSecret", txtAppSecret.Text);
             ConfigurationHelper.AddAppSetting("token", txtToken.Text);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private bool ControlValidate()
