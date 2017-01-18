@@ -1,0 +1,90 @@
+{
+    "button": [
+        {
+            "name": "公司资讯", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "公司介绍", 
+                    "url": "http://www.bluedragon.com.cn/aboutus.aspx"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "发展历程", 
+                    "url": "http://www.bluedragon.com.cn/aboutusry.aspx"
+                },
+				{
+                    "type": "view", 
+                    "name": "公司动态", 
+                    "url": "http://www.bluedragon.com.cn/news.aspx?id=16"
+                },
+				{
+                    "type": "view", 
+                    "name": "联系方式", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/WLocation"
+                }
+            ]
+        }, 
+        {
+            "name": "业务办理", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "进仓仓库", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Simple/WareHouseQuery"
+                 }, 
+                {
+                    "type": "view", 
+                    "name": "进仓单查询", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Simple/JcdSimpleQuery"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "装箱查询", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Simple/ZxccSimpleQuery"
+                },
+				{
+                    "type": "view", 
+                    "name": "网上预约", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Simple/WareHouseQuery"
+                 },
+				 {
+                    "type": "scancode_waitmsg", 
+                    "name": "扫码查询", 
+                    "key": "saomakey", 
+                    "sub_button": [ ]
+				 }
+            ]
+        },
+		{
+            "name": "仓库状态", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "仓库库容", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Charts/webChartStorageCapacity.aspx"
+                 }, 
+                {
+                    "type": "view", 
+                    "name": "卸货进展", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Charts/webChartStockIn.aspx"
+                }, 
+                {
+                    "type": "view", 
+                    "name": "装箱进展", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Charts/webChartStockOut.aspx"
+                },
+				{
+                    "type": "view", 
+                    "name": "车辆排队", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Charts/webChartVehicle.aspx"
+                 },
+				 {
+                    "type": "view", 
+                    "name": "测试授权", 
+                    "url": "http://www.bluedragon.com.cn/newwmsquery/Test.aspx"
+                 }
+            ]
+        }
+    ]
+}
