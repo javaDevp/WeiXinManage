@@ -24,5 +24,7 @@ namespace bluedragon.weixin.tools.entity
         public string Key { get; set; }
         [Column("Url")]
         public string Url { get; set; }
+        [Column("OrderNo")]
+        public int OrderNo { get; set; }
     }
 }

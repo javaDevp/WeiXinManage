@@ -35,13 +35,14 @@
             this.tsmiAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGenerate = new System.Windows.Forms.Button();
             this.MenuTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuType = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Url = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MediaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGenerate = new System.Windows.Forms.Button();
+            this.OrderNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -107,7 +108,8 @@
             this.MenuType,
             this.Url,
             this.Key,
-            this.MediaId});
+            this.MediaId,
+            this.OrderNo});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(324, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -115,6 +117,26 @@
             this.dataGridView1.Size = new System.Drawing.Size(745, 551);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
+            // 
+            // panel1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panel1, 2);
+            this.panel1.Controls.Add(this.btnGenerate);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 560);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1066, 49);
+            this.panel1.TabIndex = 2;
+            // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Location = new System.Drawing.Point(982, 15);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerate.TabIndex = 0;
+            this.btnGenerate.Text = "生成";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
             // MenuTitle
             // 
@@ -150,25 +172,11 @@
             this.MediaId.HeaderText = "MediaId";
             this.MediaId.Name = "MediaId";
             // 
-            // panel1
+            // OrderNo
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panel1, 2);
-            this.panel1.Controls.Add(this.btnGenerate);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 560);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1066, 49);
-            this.panel1.TabIndex = 2;
-            // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Location = new System.Drawing.Point(982, 15);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(75, 23);
-            this.btnGenerate.TabIndex = 0;
-            this.btnGenerate.Text = "生成";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            this.OrderNo.DataPropertyName = "OrderNo";
+            this.OrderNo.HeaderText = "顺序号";
+            this.OrderNo.Name = "OrderNo";
             // 
             // FrmMenuManage
             // 
@@ -194,13 +202,14 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmiAdd;
         private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.DataGridViewTextBoxColumn MenuTitle;
         private System.Windows.Forms.DataGridViewComboBoxColumn MenuType;
         private System.Windows.Forms.DataGridViewTextBoxColumn Url;
         private System.Windows.Forms.DataGridViewTextBoxColumn Key;
         private System.Windows.Forms.DataGridViewTextBoxColumn MediaId;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderNo;
 
     }
 }

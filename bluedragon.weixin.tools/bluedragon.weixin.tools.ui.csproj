@@ -105,6 +105,9 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaterialManage.resx">
+      <DependentUpon>FrmMaterialManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuManage.resx">
       <DependentUpon>FrmMenuManage.cs</DependentUpon>
     </EmbeddedResource>

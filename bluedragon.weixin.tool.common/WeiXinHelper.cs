@@ -1,27 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
 namespace bluedragon.weixin.tool.common
 {
+    /// <summary>
+    /// 微信辅助类（接口等）
+    /// </summary>
     public class WeiXinHelper
     {
+        #region Fields
         private static readonly string _token;
         private static readonly string _appId;
         private static readonly string _appSecret;
         private static string _accessToken;
         private static DateTime _lastTime = DateTime.MinValue;
+        #endregion
 
+        #region Constructors
         static WeiXinHelper()
         {
             _token = ConfigurationHelper.Token;
             _appId = ConfigurationHelper.AppId;
             _appSecret = ConfigurationHelper.AppSecret;
         }
+        #endregion
 
+        #region Methods
         /// <summary>
         /// 获取AccessToken
         /// </summary>
@@ -40,6 +50,7 @@ namespace bluedragon.weixin.tool.common
                 var obj = JObject.Parse(retString);
                 if (obj["errcode"] == null)
                 {
+                    _lastTime = DateTime.Now;
                     _accessToken = obj["access_token"].ToString();
                     return _accessToken;
                 }
@@ -123,5 +134,66 @@ namespace bluedragon.weixin.tool.common
                 throw new Exception(string.Format("删除自定义菜单失败，错误代码：{0}", obj["errcode"]));
             }
         }
+
+        /// <summary>
+        /// 获取永久素材
+        /// </summary>
+        /// <returns></returns>
+        public string GetPermanentMaterial(string materialId)
+        {
+            string url = string.Format("https://api.weixin.qq.com/cgi-bin/material/get_material?access_token={0}",
+                GetAccessToken());
+            string parmJson = string.Format("{{\"media_id\":\"{0}\"}}", materialId);
+            return HttpWebRequestHelper.CreatePostHttpsRequest(url, parmJson);
+        }
+
+        /// <summary>
+        /// 获取临时素材，返回素材对应的流
+        /// </summary>
+        /// <param name="materialId"></param>
+        /// <returns></returns>
+        public Stream GetTempMaterial(string materialId)
+        {
+            string url = string.Format("https://api.weixin.qq.com/cgi-bin/media/get?access_token={0}&media_id={1}",
+                GetAccessToken(), materialId);
+            //string header = HttpWebRequestHelper.CreateGetHttpsRequest(url);
+            WebRequest request = WebRequest.Create(url);
+            return request.GetResponse().GetResponseStream();
+            //using (FileStream fs = File.Create(AppDomain.CurrentDomain.BaseDirectory + "test.jpg"))
+            //{
+            //    byte[] buffer = new byte[1024];
+            //    int len = 0;
+            //    while ((len = stream.Read(buffer, 0, 1024)) > 0)
+            //        fs.Write(buffer, 0, len);
+            //}
+            //return "";
+        }
+
+        /// <summary>
+        /// 获取素材列表
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="offset"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
+        public string GetMaterials(string type, int offset, int count)
+        {
+            string url = string.Format("https://api.weixin.qq.com/cgi-bin/material/batchget_material?access_token={0}",
+                GetAccessToken());
+            string parmJson = string.Format("{{\"type\":{0},\"offset\":{1},\"count\":{2}}}", type, offset, count);
+            return HttpWebRequestHelper.CreatePostHttpsRequest(url, parmJson);
+        }
+
+        /// <summary>
+        /// 获取素材数量（永久）
+        /// </summary>
+        /// <returns></returns>
+        public string GetMaterialCount()
+        {
+            string url = string.Format("https://api.weixin.qq.com/cgi-bin/material/get_materialcount?access_token={0}",
+                GetAccessToken());
+            return HttpWebRequestHelper.CreateGetHttpsRequest(url);
+        }
+        #endregion
     }
 }
