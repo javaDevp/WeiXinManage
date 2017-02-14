@@ -7,7 +7,7 @@ using Newtonsoft.Json.Linq;
 
 namespace bluedragon.weixin.tool.common
 {
-    class WeiXinHelper
+    public class WeiXinHelper
     {
         private static readonly string _token;
         private static readonly string _appId;

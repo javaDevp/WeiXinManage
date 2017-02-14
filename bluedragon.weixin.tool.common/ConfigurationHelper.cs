@@ -61,13 +61,13 @@ namespace bluedragon.weixin.tool.common
             {
                 //配置节点不存在，添加
                 cfg.AppSettings.Settings.Add(key, value);
-                cfg.Save(ConfigurationSaveMode.Full);
+                cfg.Save(ConfigurationSaveMode.Modified);
             }
             else if (cfg.AppSettings.Settings[key].Value != value)
             {
                 //配置节点存在，值变化，更新值
                 cfg.AppSettings.Settings[key].Value = value;
-                cfg.Save(ConfigurationSaveMode.Full);
+                cfg.Save(ConfigurationSaveMode.Modified);
             }
         }
         #endregion

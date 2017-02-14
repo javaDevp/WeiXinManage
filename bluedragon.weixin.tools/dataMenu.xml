@@ -25,7 +25,7 @@
     <Text><![CDATA[素材管理]]></Text>
     <SubItem>
       <ID>31</ID>
-      <Text><![CDATA[图片素材]]></Text>
+      <Text><![CDATA[素材]]></Text>
       <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
       <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
     </SubItem>

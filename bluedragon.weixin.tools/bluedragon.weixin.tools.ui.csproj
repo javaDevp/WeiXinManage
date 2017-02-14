@@ -62,7 +62,7 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\workspace\2016WMSWebQuery\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:\工作\代码Demo\BackgroundworkerDemo\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +81,12 @@
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaterialManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaterialManage.Designer.cs">
+      <DependentUpon>FrmMaterialManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMenuManage.cs">
       <SubType>Form</SubType>
@@ -136,6 +142,14 @@
     <ProjectReference Include="..\bluedragon.weixin.tool.common\bluedragon.weixin.tool.common.csproj">
       <Project>{709078c7-bad2-4545-ac26-6ac99fe1a370}</Project>
       <Name>bluedragon.weixin.tool.common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bluedragon.weixin.tools.bll\bluedragon.weixin.tools.bll.csproj">
+      <Project>{f577c8e3-d976-439f-a545-1699eeddac41}</Project>
+      <Name>bluedragon.weixin.tools.bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bluedragon.weixin.tools.entity\bluedragon.weixin.tools.entity.csproj">
+      <Project>{fb67f7c6-2f55-4d75-b8a2-2974d78a2eab}</Project>
+      <Name>bluedragon.weixin.tools.entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
