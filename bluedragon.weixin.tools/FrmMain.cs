@@ -17,6 +17,7 @@ namespace bluedragon.weixin.tools.ui
         public FrmMain()
         {
             InitializeComponent();
+            
             LoadMenu();
         }
 

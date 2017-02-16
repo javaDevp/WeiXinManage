@@ -29,6 +29,12 @@
       <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
       <TypeName>bluedragon.weixin.tools.ui.FrmMaterialManage</TypeName>
     </SubItem>
+    <SubItem>
+      <ID>31</ID>
+      <Text><![CDATA[临时素材管理]]></Text>
+      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
+      <TypeName>bluedragon.weixin.tools.ui.FrmTempMaterialManage</TypeName>
+    </SubItem>
   </Item>
   <Item>
     <ID>4</ID>

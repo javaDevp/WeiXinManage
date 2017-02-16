@@ -194,6 +194,36 @@ namespace bluedragon.weixin.tool.common
                 GetAccessToken());
             return HttpWebRequestHelper.CreateGetHttpsRequest(url);
         }
+
+        /// <summary>
+        /// 添加其他类型永久素材
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public string AddPermanentMaterial(string type, string path)
+        {
+            string url = string.Format("https://api.weixin.qq.com/cgi-bin/material/add_material?access_token={0}&type={1}",
+                GetAccessToken(), type);
+            //WebClient wc = new WebClient();
+            //wc.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+            //byte[] data = File.ReadAllBytes(fileName);
+            //byte[] result = wc.UploadData(url, "post", data);
+            //return Encoding.UTF8.GetString(result);
+            return HttpWebRequestHelper.UploadFile(path, url);
+        }
+
+        /// <summary>
+        /// 上传图片接口（用于图文、不占用图片素材）
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public string AddImage(string path)
+        {
+            string url = string.Format("https://api.weixin.qq.com/cgi-bin/media/uploadimg?access_token={0}",
+                GetAccessToken());
+            return HttpWebRequestHelper.UploadFile(path, url);
+        }
         #endregion
     }
 }

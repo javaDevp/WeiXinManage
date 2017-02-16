@@ -1,6 +1,6 @@
 ﻿namespace bluedragon.weixin.tools.ui
 {
-    partial class FrmMaterialManage
+    partial class FrmTempMaterialManage
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // FrmMaterialManage
+            // FrmTempMaterialManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 454);
-            this.Name = "FrmMaterialManage";
-            this.Text = "永久素材管理";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "FrmTempMaterialManage";
+            this.Text = "临时素材管理";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
     }
 }
