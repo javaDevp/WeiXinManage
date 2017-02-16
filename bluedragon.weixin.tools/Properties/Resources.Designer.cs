@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace bluedragon.weixin.tools.ui.Properties {
+namespace bluedragon.multipaltform.sol.ui.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace bluedragon.weixin.tools.ui.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("bluedragon.weixin.tools.ui.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("bluedragon.multipaltform.sol.ui.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

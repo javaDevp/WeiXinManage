@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using bluedragon.weixin.tools.entity;
-using bluedragon.weixin.tools.repository;
+using bluedragon.multipaltform.sol.weixin.entity;
+using bluedragon.multipaltform.sol.weixin.repository;
 using LinqToDB;
 
-namespace bluedragon.weixin.tools.bll
+namespace bluedragon.multipaltform.sol.weixin.bll
 {
     public class WXMaterialBll
     {

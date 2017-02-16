@@ -4,9 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bluedragon.weixin.tool.common;
-using bluedragon.weixin.tools.ui;
+using bluedragon.multipaltform.sol.ui;
+using DevExpress.LookAndFeel;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
 
-namespace bluedragon.weixin.tools
+namespace bluedragon.multipaltform.sol.ui
 {
     static class Program
     {
@@ -18,6 +21,8 @@ namespace bluedragon.weixin.tools
         {
             try
             {
+                BonusSkins.Register();
+                SkinManager.EnableFormSkins();
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 //判断是否配置了appId & appSecret & token

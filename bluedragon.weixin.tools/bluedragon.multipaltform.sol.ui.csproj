@@ -7,8 +7,8 @@
     <ProjectGuid>{2245AB4C-B8A1-4B0B-AD85-96EC3C6A8219}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>bluedragon.weixin.tools.ui</RootNamespace>
-    <AssemblyName>bluedragon.weixin.tools.ui</AssemblyName>
+    <RootNamespace>bluedragon.multipaltform.sol.ui</RootNamespace>
+    <AssemblyName>bluedragon.multipaltform.sol.ui</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -60,27 +60,12 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v13.2">
-      <HintPath>..\..\..\..\Tencent Files\874945264\FileRecv\简单权限管理系统\NapoleonCode-master\NapoleonCode.Win\DLL\DevExpress.BonusSkins.v13.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Data.v13.2">
-      <HintPath>..\..\..\..\Tencent Files\874945264\FileRecv\简单权限管理系统\NapoleonCode-master\NapoleonCode.Win\DLL\DevExpress.Data.v13.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Printing.v13.2.Core">
-      <HintPath>..\..\..\..\Tencent Files\874945264\FileRecv\简单权限管理系统\NapoleonCode-master\NapoleonCode.Win\DLL\DevExpress.Printing.v13.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Sparkline.v13.2.Core">
-      <HintPath>..\..\..\..\Tencent Files\874945264\FileRecv\简单权限管理系统\NapoleonCode-master\NapoleonCode.Win\DLL\DevExpress.Sparkline.v13.2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Utils.v13.2">
-      <HintPath>..\..\..\..\Tencent Files\874945264\FileRecv\简单权限管理系统\NapoleonCode-master\NapoleonCode.Win\DLL\DevExpress.Utils.v13.2.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Win.Projects.v11.1.Design">
-      <HintPath>..\..\..\..\Tencent Files\874945264\FileRecv\DevExpress\DevExpress.Win.Projects.v11.1.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.XtraEditors.v13.2">
-      <HintPath>..\..\..\..\Tencent Files\874945264\FileRecv\简单权限管理系统\NapoleonCode-master\NapoleonCode.Win\DLL\DevExpress.XtraEditors.v13.2.dll</HintPath>
-    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -98,23 +83,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMaterialManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMaterialManage.Designer.cs">
-      <DependentUpon>FrmMaterialManage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMenuManage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMenuManage.Designer.cs">
-      <DependentUpon>FrmMenuManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSettings.cs">
       <SubType>Form</SubType>
@@ -133,18 +112,13 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMaterialManage.resx">
-      <DependentUpon>FrmMaterialManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenuManage.resx">
-      <DependentUpon>FrmMenuManage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmSettings.resx">
       <DependentUpon>FrmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTempMaterialManage.resx">
       <DependentUpon>FrmTempMaterialManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -173,21 +147,96 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bluedragon.weixin.tool.common\bluedragon.weixin.tool.common.csproj">
+    <ProjectReference Include="..\bluedragon.weixin.tool.common\bluedragon.multipaltform.sol.common.csproj">
       <Project>{709078c7-bad2-4545-ac26-6ac99fe1a370}</Project>
-      <Name>bluedragon.weixin.tool.common</Name>
+      <Name>bluedragon.multipaltform.sol.common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\bluedragon.weixin.tools.bll\bluedragon.weixin.tools.bll.csproj">
+    <ProjectReference Include="..\bluedragon.weixin.tools.bll\bluedragon.multipaltform.sol.bll.csproj">
       <Project>{f577c8e3-d976-439f-a545-1699eeddac41}</Project>
-      <Name>bluedragon.weixin.tools.bll</Name>
+      <Name>bluedragon.multipaltform.sol.bll</Name>
     </ProjectReference>
-    <ProjectReference Include="..\bluedragon.weixin.tools.entity\bluedragon.weixin.tools.entity.csproj">
+    <ProjectReference Include="..\bluedragon.weixin.tools.entity\bluedragon.multipaltform.sol.entity.csproj">
       <Project>{fb67f7c6-2f55-4d75-b8a2-2974d78a2eab}</Project>
-      <Name>bluedragon.weixin.tools.entity</Name>
+      <Name>bluedragon.multipaltform.sol.entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="dataMenu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\backward.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\bookmark.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\calendar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\cart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\download.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\forward、.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\info.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\like.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\mail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\message.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\movie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\music.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\options.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\pause.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\question.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\share.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\trashcan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\unlock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\upload.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\warning.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -208,6 +257,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

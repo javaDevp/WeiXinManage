@@ -1,4 +1,4 @@
-﻿namespace bluedragon.weixin.tools.ui
+﻿namespace bluedragon.multipaltform.sol.weixin.ui
 {
     partial class FrmMenuManage
     {

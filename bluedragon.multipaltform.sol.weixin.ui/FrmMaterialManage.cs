@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bluedragon.weixin.tool.common;
-using bluedragon.weixin.tools.bll;
-using bluedragon.weixin.tools.entity;
+using bluedragon.multipaltform.sol.weixin.bll;
+using bluedragon.multipaltform.sol.weixin.entity;
 using Newtonsoft.Json.Linq;
 
-namespace bluedragon.weixin.tools.ui
+namespace bluedragon.multipaltform.sol.weixin.ui
 {
     public partial class FrmMaterialManage : Form
     {

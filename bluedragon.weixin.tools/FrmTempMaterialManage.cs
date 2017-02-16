@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace bluedragon.weixin.tools.ui
+namespace bluedragon.multipaltform.sol.ui
 {
     public partial class FrmTempMaterialManage : Form
     {

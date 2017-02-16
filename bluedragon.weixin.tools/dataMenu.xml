@@ -6,8 +6,8 @@
     <SubItem>
       <ID>11</ID>
       <Text><![CDATA[退出(E&xit)]]></Text>
-      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
-      <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
+      <AssemblyFile>bluedragon.multipaltform.sol.ui</AssemblyFile>
+      <TypeName>bluedragon.multipaltform.sol.ui.FrmMenuManage</TypeName>
     </SubItem>
   </Item>
   <Item>
@@ -16,8 +16,8 @@
     <SubItem>
       <ID>21</ID>
       <Text><![CDATA[菜单管理]]></Text>
-      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
-      <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
+      <AssemblyFile>bluedragon.multipaltform.sol.ui</AssemblyFile>
+      <TypeName>bluedragon.multipaltform.sol.ui.FrmMenuManage</TypeName>
     </SubItem>
   </Item>
   <Item>
@@ -26,14 +26,14 @@
     <SubItem>
       <ID>31</ID>
       <Text><![CDATA[永久素材管理]]></Text>
-      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
-      <TypeName>bluedragon.weixin.tools.ui.FrmMaterialManage</TypeName>
+      <AssemblyFile>bluedragon.multipaltform.sol.ui</AssemblyFile>
+      <TypeName>bluedragon.multipaltform.sol.ui.FrmMaterialManage</TypeName>
     </SubItem>
     <SubItem>
       <ID>31</ID>
       <Text><![CDATA[临时素材管理]]></Text>
-      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
-      <TypeName>bluedragon.weixin.tools.ui.FrmTempMaterialManage</TypeName>
+      <AssemblyFile>bluedragon.multipaltform.sol.ui</AssemblyFile>
+      <TypeName>bluedragon.multipaltform.sol.ui.FrmTempMaterialManage</TypeName>
     </SubItem>
   </Item>
   <Item>
@@ -42,8 +42,8 @@
     <SubItem>
       <ID>41</ID>
       <Text><![CDATA[关于(&About)]]></Text>
-      <AssemblyFile>bluedragon.weixin.tools.ui</AssemblyFile>
-      <TypeName>bluedragon.weixin.tools.ui.FrmMenuManage</TypeName>
+      <AssemblyFile>bluedragon.multipaltform.sol.ui</AssemblyFile>
+      <TypeName>bluedragon.multipaltform.sol.ui.FrmMenuManage</TypeName>
     </SubItem>
   </Item>
 </Menu>

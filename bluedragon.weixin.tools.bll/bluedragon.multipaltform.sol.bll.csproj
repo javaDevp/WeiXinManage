@@ -7,8 +7,8 @@
     <ProjectGuid>{F577C8E3-D976-439F-A545-1699EEDDAC41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>bluedragon.weixin.tools.bll</RootNamespace>
-    <AssemblyName>bluedragon.weixin.tools.bll</AssemblyName>
+    <RootNamespace>bluedragon.multipaltform.sol.bll</RootNamespace>
+    <AssemblyName>bluedragon.multipaltform.sol.bll</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,18 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WXMaterialBll.cs" />
-    <Compile Include="WXMenuBll.cs" />
+    <Compile Include="SysMenuBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bluedragon.weixin.tools.entity\bluedragon.weixin.tools.entity.csproj">
+    <ProjectReference Include="..\bluedragon.weixin.tools.entity\bluedragon.multipaltform.sol.entity.csproj">
       <Project>{fb67f7c6-2f55-4d75-b8a2-2974d78a2eab}</Project>
-      <Name>bluedragon.weixin.tools.entity</Name>
+      <Name>bluedragon.multipaltform.sol.entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\bluedragon.weixin.tools.repository\bluedragon.weixin.tools.repository.csproj">
+    <ProjectReference Include="..\bluedragon.weixin.tools.repository\bluedragon.multipaltform.sol.repository.csproj">
       <Project>{b269b1d4-9c59-42f4-b945-0d624de599f7}</Project>
-      <Name>bluedragon.weixin.tools.repository</Name>
+      <Name>bluedragon.multipaltform.sol.repository</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

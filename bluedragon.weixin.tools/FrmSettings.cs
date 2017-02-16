@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using bluedragon.weixin.tool.common;
 
-namespace bluedragon.weixin.tools.ui
+namespace bluedragon.multipaltform.sol.ui
 {
     public partial class FrmSettings : Form
     {

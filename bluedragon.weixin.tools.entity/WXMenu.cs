@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LinqToDB.Mapping;
 
-namespace bluedragon.weixin.tools.entity
+namespace bluedragon.multipaltform.sol.entity
 {
     [Table("WX_Menu")]
     public class WXMenu
