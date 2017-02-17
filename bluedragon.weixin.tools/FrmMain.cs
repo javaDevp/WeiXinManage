@@ -184,7 +184,7 @@ namespace bluedragon.multipaltform.sol.ui
         /// <param name="tabPageName"></param>
         private void AddTabPage(string assemblyFile, string typeName, string tabPageName)
         {
-            var ass = Assembly.Load(assemblyFile);
+            var ass = Assembly.LoadFrom(assemblyFile);
             Type t = ass.GetType(typeName);
             var frm = (Form)Activator.CreateInstance(t);
             TabPage tabPage = tabControl1.TabPages[tabPageName];

@@ -44,8 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="SysMenu.cs" />
-    <Compile Include="WXMaterial.cs" />
-    <Compile Include="WXMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
