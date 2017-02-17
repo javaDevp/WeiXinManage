@@ -101,8 +101,8 @@ namespace bluedragon.multipaltform.sol.weixin.ui
             var selectedNode = tvMenus.SelectedNode;
             if (selectedNode != null)
             {
-                if (selectedNode.Nodes.Count > 0 && 
-                    menus.Any(m=>m.ParentMenuID == 0 && 
+                if (selectedNode.Nodes.Count > 0 &&
+                    menus.Any(m => m.ParentMenuID == 0 &&
                         m.MenuID == int.Parse(selectedNode.Tag.ToString())))
                 {
                     var newNode = new TreeNode();
@@ -192,13 +192,13 @@ namespace bluedragon.multipaltform.sol.weixin.ui
             StringBuilder sb = new StringBuilder();
             sb.Append("{");
             sb.Append("\"button\": [");
-            foreach (var menu in menus.Where(m=>m.ParentMenuID == 0))
+            foreach (var menu in menus.Where(m => m.ParentMenuID == 0))
             {
                 sb.Append("{");
                 sb.AppendFormat("\"name\": \"{0}\", ", menu.MenuTitle);
                 sb.Append(" \"sub_button\": [");
 
-                foreach (var childMenu in menus.Where(m=>m.ParentMenuID == menu.MenuID))
+                foreach (var childMenu in menus.Where(m => m.ParentMenuID == menu.MenuID))
                 {
                     sb.Append("{");
                     sb.AppendFormat("\"type\": \"{0}\",", childMenu.MenuType);
@@ -222,7 +222,7 @@ namespace bluedragon.multipaltform.sol.weixin.ui
                 sb.Append("]");
                 sb.Append("},");
             }
-            
+
             sb.Remove(sb.Length - 1, 1);
             sb.Append("]");
             sb.Append("}");

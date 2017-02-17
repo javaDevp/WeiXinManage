@@ -20,14 +20,15 @@ namespace bluedragon.multipaltform.sol.weixin.bll
 
         public int Save(WXMenu menu)
         {
-            if (menu.MenuID.HasValue)
-            {
-               return _wxdb.Update(menu);
-            }
-            else
-            {
-                return (int)(decimal)_wxdb.InsertWithIdentity(menu);
-            }
+            //if (menu.MenuID.HasValue)
+            //{
+            //   return _wxdb.Update(menu);
+            //}
+            //else
+            //{
+            //    return (int)(decimal)_wxdb.InsertWithIdentity(menu);
+            //}
+            return 0;
         }
 
         public void Delete(WXMenu menu)

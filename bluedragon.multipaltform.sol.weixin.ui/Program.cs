@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Skins;
+using DevExpress.UserSkins;
 
 namespace bluedragon.multipaltform.sol.weixin.ui
 {
@@ -14,9 +16,11 @@ namespace bluedragon.multipaltform.sol.weixin.ui
         [STAThread]
         static void Main()
         {
+            BonusSkins.Register();
+            SkinManager.EnableFormSkins();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMenuManage());
+            Application.Run(new FrmMenuManage2());
         }
     }
 }

@@ -35,6 +35,15 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\工作\代码Demo\BackgroundworkerDemo\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -63,6 +72,12 @@
     <Compile Include="FrmMenuManage.Designer.cs">
       <DependentUpon>FrmMenuManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMenuManage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuManage2.Designer.cs">
+      <DependentUpon>FrmMenuManage2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmMaterialManage.resx">
@@ -71,6 +86,10 @@
     <EmbeddedResource Include="FrmMenuManage.resx">
       <DependentUpon>FrmMenuManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuManage2.resx">
+      <DependentUpon>FrmMenuManage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -97,6 +116,10 @@
     <ProjectReference Include="..\bluedragon.multipaltform.sol.bll\bluedragon.multipaltform.sol.weixin.bll.csproj">
       <Project>{0969db29-2912-457f-b3e8-2c12da9ca45c}</Project>
       <Name>bluedragon.multipaltform.sol.weixin.bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bluedragon.multipaltform.sol.control\bluedragon.multipaltform.sol.control.csproj">
+      <Project>{4a05c0dd-d60d-499e-97c5-3358c4e9d9dc}</Project>
+      <Name>bluedragon.multipaltform.sol.control</Name>
     </ProjectReference>
     <ProjectReference Include="..\bluedragon.multipaltform.sol.weixin.entity\bluedragon.multipaltform.sol.weixin.entity.csproj">
       <Project>{beff57c1-7226-4d94-8da7-c5abb01d0006}</Project>
