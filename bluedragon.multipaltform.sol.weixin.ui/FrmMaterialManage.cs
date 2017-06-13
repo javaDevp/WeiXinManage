@@ -23,28 +23,41 @@ namespace bluedragon.multipaltform.sol.weixin.ui
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FrmMaterialManage_Load(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
+            gridControl1.DataSource = _bll.GetMaterials();
+        }
+
+        private void btnUploadImg_Click(object sender, EventArgs e)
+        {
+            UploadMaterial("image");
+            RefreshData();
+        }
+
+        private void UploadMaterial(string type)
         {
             WeiXinHelper helper = new WeiXinHelper();
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (DialogResult.OK == openFileDialog.ShowDialog(this))
             {
-                string strJson = helper.AddPermanentMaterial("image", openFileDialog.FileName);
+                string strJson = helper.AddPermanentMaterial(type, openFileDialog.FileName);
                 if (strJson.Contains("media_id"))
                 {
                     JObject obj = JObject.Parse(strJson);
                     WXMaterial material = new WXMaterial()
                     {
                         MediaId = obj["media_id"].ToString(),
-                        Type = "image",
+                        Type = type,
                         Url = obj["url"].ToString()
                     };
                     _bll.Add(material);
                 }
             }
-            //richTextBox1.Text = helper.GetMaterialCount();
-            //pictureBox1.Image = Image.FromStream(helper.GetTempMaterial("ej2jMVrM_d79LvsIib-kKY3tUCioW4H6X5xex0Cul8ZTPQfuNpTz3PCXnYtGQ4hW"));
-            //MessageBox.Show(helper.GetTempMaterial("ej2jMVrM_d79LvsIib-kKY3tUCioW4H6X5xex0Cul8ZTPQfuNpTz3PCXnYtGQ4hW"));
         }
     }
 }

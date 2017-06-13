@@ -57,7 +57,7 @@ namespace bluedragon.multipaltform.sol.ui
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Size = new System.Drawing.Size(1370, 23);
+            this.ribbonControl1.Size = new System.Drawing.Size(1362, 23);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // splitContainer
@@ -74,8 +74,8 @@ namespace bluedragon.multipaltform.sol.ui
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer.Size = new System.Drawing.Size(1370, 727);
-            this.splitContainer.SplitterDistance = 210;
+            this.splitContainer.Size = new System.Drawing.Size(1362, 719);
+            this.splitContainer.SplitterDistance = 208;
             this.splitContainer.SplitterWidth = 5;
             this.splitContainer.TabIndex = 1;
             // 
@@ -84,7 +84,7 @@ namespace bluedragon.multipaltform.sol.ui
             this.tvMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvMenu.Location = new System.Drawing.Point(0, 0);
             this.tvMenu.Name = "tvMenu";
-            this.tvMenu.Size = new System.Drawing.Size(208, 725);
+            this.tvMenu.Size = new System.Drawing.Size(206, 717);
             this.tvMenu.TabIndex = 0;
             // 
             // tabControl1
@@ -93,14 +93,14 @@ namespace bluedragon.multipaltform.sol.ui
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1153, 725);
+            this.tabControl1.Size = new System.Drawing.Size(1147, 717);
             this.tabControl1.TabIndex = 1;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 750);
+            this.ClientSize = new System.Drawing.Size(1362, 742);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "FrmMain";

@@ -17,5 +17,10 @@ namespace bluedragon.multipaltform.sol.weixin.bll
         {
             return _wxdb.Insert(material);
         }
+
+        public IEnumerable<WXMaterial> GetMaterials()
+        {
+            return _wxdb.WxMaterials;
+        }
     }
 }
